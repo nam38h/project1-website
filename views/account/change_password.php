@@ -42,9 +42,9 @@
                     <div class="col-md-8" id="change_password">
                         <h5>ĐỔI MẬT KHẨU</h5>
                         <span>Để đảm bảo tính năng bảo mật bạn vui lòng đặt mật khẩu ít nhất 8 ký tự</span>
-                        <form>
+                        <form method="POST">
                             <div class="mb-3">
-                                <label for="exampleInputEmail1" class="form-label">Mật khẩu cũ *</label>
+                                <label for="exampleInputEmail1" class="form-label" >Mật khẩu cũ *</label>
                                 <input type="password" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="password">
                             </div>
                             <div class="mb-3">
@@ -63,6 +63,25 @@
             <div class="col-md-2"></div>
         </div>
     </main>
+    <?php
+    require_once "models/product.php";
+    $passerr=$newpassarr=$cfpasserr ="";
+    $id = $_SESSION['userLogin']['id'];
+    if (isset($_POST['password']) && isset($_POST['newpass']) && isset($_POST['cfpass'])){
+        $password = $_POST["password"];
+        $newpass = $_POST["newpass"];
+        $cfpass = $_POST["cfpass"];
+        $passwordEncode = password_hash($newpass, PASSWORD_DEFAULT);
+        if ( empty($password)  || empty($newpass) || empty($cfpass)) {
+            
+        }else{
+            $sql = "UPDATE `user` SET `mat_khau`='$passwordEncode' WHERE id=$id";
+            querySQL($sql);
+        }
+        
+    }
+    ?>
+    
 </body>
 
 </html>

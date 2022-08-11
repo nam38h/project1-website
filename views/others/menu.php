@@ -78,7 +78,7 @@ echo "</pre>";
                             <div class="col-md-3 col-12" id="hotline">
                                 <i class="fa-solid fa-phone"></i>
                                 <p>HOTLINE:</p>
-                                <p class="phone_number">1900 0000</p>
+                                <p class="phone_number"><a href="tel:+19000000">1900 0000</a></p>
                             </div>
                             <div class="col-md-3 col-12" id="location">
                                 <i class="fa-solid fa-location-dot"></i>

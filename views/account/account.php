@@ -73,6 +73,7 @@
                                             <input type="text" class="form-control" name="address" id="recipient-name" placeholder="Địa chỉ*">
                                         </div>
                                         <button type="submit" class="btn btn-dark">Thay đổi</button>
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                                     </form>
 
 
@@ -103,7 +104,7 @@
             $sql = "UPDATE `user` SET `ho_ten`='$inp_name',`so_dien_thoai`='$inp_tel',`nam_sinh`='$inp_age',`gioi_tinh`='$inp_gender',`dia_chi`='$inp_adr' WHERE `id`= $id";
 
             querySQL($sql);
-        
+
     } ?>
 </body>
 

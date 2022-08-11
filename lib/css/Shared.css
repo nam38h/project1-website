@@ -32,9 +32,11 @@ header {
 	margin-left: 12px;
 	font-size: 12px;
 }
-.phone_number {
+.phone_number a{
+	text-decoration: none;
 	color: red;
 	font-weight: bold;
+	font-size: 12px;
 }
 #location {
 	display: flex;
